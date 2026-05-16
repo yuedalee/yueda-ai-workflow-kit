@@ -2,7 +2,7 @@
 
 > 这不是提示词合集，而是一套面向中小企业真实业务场景的 AI 工作流与 Agent Skill 样板库。
 
-官网入口：
+官网入口：  
 [https://yuedalee.github.io/](https://yuedalee.github.io/)
 
 ---
@@ -35,7 +35,9 @@
 
 ## 当前公开样板
 
-### 1. 公众号资料包生成 Skill
+### 1. [公众号资料包生成 Skill](skills/official-account-package/SKILL.md)
+
+状态：已公开 v1.0
 
 用于把一个选题，整理成适合公众号发布的完整资料包，包括：
 
@@ -46,16 +48,51 @@
 * 图片清单
 * 插图位置
 * 发布检查清单
+* 示例输入
+* 示例输出骨架
+
+相关文件：
+
+* [Skill 说明文件](skills/official-account-package/SKILL.md)
+* [示例输入 input.md](skills/official-account-package/examples/input.md)
+* [示例输出骨架 output-outline.md](skills/official-account-package/examples/output-outline.md)
 
 目标不是替代创作者，而是让内容生产过程更稳定、更可复用。
 
+---
+
 ### 2. 企业问题诊断 Skill
+
+状态：待公开
 
 用于帮助企业管理者判断一个问题是否值得投入资源，识别真正的 A 类问题。
 
+后续计划包含：
+
+* 问题重要性判断
+* 收入影响评估
+* 时间压力评估
+* 家庭与关系影响评估
+* 行动优先级建议
+* 是否进入深度决策流程的判断
+
+---
+
 ### 3. 短视频脚本策划 Skill
 
+状态：待公开
+
 用于生成短视频选题、开头钩子、口播稿、分镜建议、封面文案和平台发布版本。
+
+后续计划包含：
+
+* 选题判断
+* 开头钩子
+* 90 秒口播稿
+* 分镜建议
+* 封面标题
+* 平台适配版本
+* 发布检查清单
 
 ---
 
@@ -186,7 +223,9 @@ Based on Yueda AI Workflow Kit by 悦达智科
 
 ## 后续计划
 
-* [ ] 创建公众号资料包生成 Skill
+* [x] 创建公众号资料包生成 Skill
+* [x] 添加公众号资料包 Skill 示例输入
+* [x] 添加公众号资料包 Skill 示例输出骨架
 * [ ] 创建企业问题诊断 Skill
 * [ ] 创建短视频脚本策划 Skill
 * [ ] 增加 Skill 设计模板
@@ -205,7 +244,7 @@ Based on Yueda AI Workflow Kit by 悦达智科
 
 > AI 的真正价值，不是让人追逐工具，而是帮助企业把经验变成系统，把系统变成生产力。
 
-官网：
+官网：  
 [https://yuedalee.github.io/](https://yuedalee.github.io/)
 
 ---

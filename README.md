@@ -85,7 +85,17 @@
 
 ---
 
-### 3. 短视频脚本策划 Skill
+### 3. [Agent Skill 通用模板](templates/skill-template.md)
+
+状态：已公开 v1.0
+
+用于创建新的 Agent Skill / AI 工作流样板，保证不同 Skill 的结构、边界、质量标准和示例格式保持一致。
+
+建议所有后续 Skill 都基于这个模板创建。
+
+---
+
+### 4. 短视频脚本策划 Skill
 
 状态：待公开
 
@@ -238,8 +248,8 @@ Based on Yueda AI Workflow Kit by 悦达智科
 * [x] 创建企业问题诊断 Skill
 * [x] 添加企业问题诊断 Skill 示例输入
 * [x] 添加企业问题诊断 Skill 示例输出骨架
+* [x] 增加 Skill 设计模板
 * [ ] 创建短视频脚本策划 Skill
-* [ ] 增加 Skill 设计模板
 * [ ] 增加企业 AI 工作流案例
 * [ ] 增加 FAQ 文档
 * [ ] 增加使用演示

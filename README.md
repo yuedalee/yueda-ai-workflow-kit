@@ -61,20 +61,27 @@
 
 ---
 
-### 2. 企业问题诊断 Skill
+### 2. [企业问题诊断 Skill](skills/business-problem-diagnosis/SKILL.md)
 
-状态：待公开
+状态：已公开 v1.0
 
-用于帮助企业管理者判断一个问题是否值得投入资源，识别真正的 A 类问题。
+用于帮助企业老板和管理者判断一个问题是否值得投入资源，识别真正的 A 类问题，并形成 72 小时行动建议。
 
-后续计划包含：
+它重点判断：
 
-* 问题重要性判断
-* 收入影响评估
-* 时间压力评估
-* 家庭与关系影响评估
-* 行动优先级建议
-* 是否进入深度决策流程的判断
+* 这个问题是 A / B / C 哪一类
+* 是否影响收入、现金流、客户信任和团队协同
+* 是否属于用户的影响圈或控制圈
+* 下一步 72 小时内最应该做什么
+* 哪些事情不建议立刻做
+
+相关文件：
+
+* [Skill 说明文件](skills/business-problem-diagnosis/SKILL.md)
+* [示例输入 input.md](skills/business-problem-diagnosis/examples/input.md)
+* [示例输出骨架 output-outline.md](skills/business-problem-diagnosis/examples/output-outline.md)
+
+目标不是替代专业咨询，而是帮助用户从“情绪化焦虑”进入“结构化判断”。
 
 ---
 
@@ -105,12 +112,14 @@ yueda-ai-workflow-kit/
 ├── skills/
 │   ├── official-account-package/
 │   │   ├── SKILL.md
-│   │   ├── examples/
-│   │   │   ├── input.md
-│   │   │   └── output-outline.md
-│   │   └── assets/
+│   │   └── examples/
+│   │       ├── input.md
+│   │       └── output-outline.md
 │   ├── business-problem-diagnosis/
-│   │   └── SKILL.md
+│   │   ├── SKILL.md
+│   │   └── examples/
+│   │       ├── input.md
+│   │       └── output-outline.md
 │   └── short-video-script/
 │       └── SKILL.md
 ├── templates/
@@ -226,7 +235,9 @@ Based on Yueda AI Workflow Kit by 悦达智科
 * [x] 创建公众号资料包生成 Skill
 * [x] 添加公众号资料包 Skill 示例输入
 * [x] 添加公众号资料包 Skill 示例输出骨架
-* [ ] 创建企业问题诊断 Skill
+* [x] 创建企业问题诊断 Skill
+* [x] 添加企业问题诊断 Skill 示例输入
+* [x] 添加企业问题诊断 Skill 示例输出骨架
 * [ ] 创建短视频脚本策划 Skill
 * [ ] 增加 Skill 设计模板
 * [ ] 增加企业 AI 工作流案例

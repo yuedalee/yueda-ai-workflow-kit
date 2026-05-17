@@ -1,0 +1,287 @@
+<!--
+悦达智科｜官网合作需求表单前端组件
+用途：后续可嵌入 yuedalee.github.io 或悦达传媒官网。
+注意：不要把飞书机器人 Webhook、API Key、n8n 密钥写在前端。
+只允许把一个经过服务器/n8n保护的公开接收地址填入 CONTACT_FORM_ENDPOINT。
+-->
+
+<section id="contact-form" class="yd-contact-section">
+  <div class="yd-contact-wrap">
+    <div class="yd-contact-copy">
+      <div class="yd-kicker">Contact</div>
+      <h2>先从一个真实管理或经营问题开始。</h2>
+      <p>
+        如果你希望把企业内部经验、管理方法、销售流程、内容生产方式或经营共创工具，
+        变成团队能使用的 AI 工具，可以先提交一个真实业务场景。
+      </p>
+    </div>
+
+    <form class="yd-contact-form" id="yuedaContactForm">
+      <div class="yd-form-grid">
+        <label>
+          <span>称呼 / 姓名 *</span>
+          <input name="name" type="text" required placeholder="请填写你的称呼" />
+        </label>
+
+        <label>
+          <span>公司 / 组织名称</span>
+          <input name="company" type="text" placeholder="可选" />
+        </label>
+
+        <label>
+          <span>你的身份 *</span>
+          <select name="role" required>
+            <option value="">请选择</option>
+            <option>企业老板</option>
+            <option>企业高管 / 部门负责人</option>
+            <option>内容 / 新媒体负责人</option>
+            <option>企业服务从业者</option>
+            <option>AI 工具实践者</option>
+            <option>其他</option>
+          </select>
+        </label>
+
+        <label>
+          <span>联系方式 *</span>
+          <input name="contact" type="text" required placeholder="微信、手机号或邮箱，任选一种" />
+        </label>
+      </div>
+
+      <label>
+        <span>你最想解决的问题 *</span>
+        <textarea name="problem" required rows="5" placeholder="请简单描述你现在最想解决的管理、经营、销售、内容或协同问题。"></textarea>
+      </label>
+
+      <div class="yd-form-grid">
+        <label>
+          <span>你希望把什么变成 AI 工具？ *</span>
+          <select name="tool_type" required>
+            <option value="">请选择</option>
+            <option>管理方法</option>
+            <option>销售流程</option>
+            <option>内容生产流程</option>
+            <option>客户跟进流程</option>
+            <option>会议复盘流程</option>
+            <option>企业知识库</option>
+            <option>岗位经验</option>
+            <option>不确定，需要先诊断</option>
+          </select>
+        </label>
+
+        <label>
+          <span>你现在有没有现成资料？</span>
+          <select name="materials">
+            <option value="">请选择</option>
+            <option>有文档资料</option>
+            <option>有聊天记录 / 会议记录</option>
+            <option>主要在脑子里，还没整理</option>
+            <option>不确定</option>
+          </select>
+        </label>
+
+        <label>
+          <span>合作意向</span>
+          <select name="intent">
+            <option value="">请选择</option>
+            <option>先了解一下</option>
+            <option>想做一次诊断</option>
+            <option>想定制 Skill / Agent</option>
+            <option>想做本地应用或系统</option>
+            <option>想长期合作</option>
+          </select>
+        </label>
+
+        <label>
+          <span>来源渠道</span>
+          <select name="source">
+            <option>官网</option>
+            <option>GitHub 官网</option>
+            <option>悦达智科公开样板库</option>
+            <option>公众号</option>
+            <option>视频号直播</option>
+            <option>朋友圈</option>
+            <option>朋友推荐</option>
+            <option>其他</option>
+          </select>
+        </label>
+      </div>
+
+      <button type="submit" class="yd-submit-btn">提交合作需求</button>
+      <p class="yd-form-note" id="yuedaContactFormNote">提交后，我们会根据你的业务场景判断适合做成 Skill、Agent、本地应用，还是 OA 协同模块。</p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .yd-contact-section {
+    padding: 92px 0;
+    background: transparent;
+  }
+
+  .yd-contact-wrap {
+    width: min(1160px, calc(100% - 48px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.86fr 1.14fr;
+    gap: 28px;
+    align-items: start;
+    padding: 42px;
+    border-radius: 34px;
+    border: 1px solid rgba(255,255,255,.14);
+    background:
+      radial-gradient(circle at 88% 20%, rgba(217,164,65,.16), transparent 28%),
+      linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+    box-shadow: 0 26px 80px rgba(0,0,0,.38);
+  }
+
+  .yd-kicker {
+    color: #d9a441;
+    font-size: 13px;
+    font-weight: 950;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .yd-contact-copy h2 {
+    margin: 0 0 18px;
+    color: #f8fbff;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.16;
+    letter-spacing: -.035em;
+    font-weight: 950;
+  }
+
+  .yd-contact-copy p,
+  .yd-form-note {
+    color: #b8c5d5;
+    line-height: 1.95;
+    margin: 0;
+  }
+
+  .yd-contact-form {
+    display: grid;
+    gap: 18px;
+  }
+
+  .yd-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .yd-contact-form label {
+    display: grid;
+    gap: 8px;
+    color: #f8fbff;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  .yd-contact-form input,
+  .yd-contact-form select,
+  .yd-contact-form textarea {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 16px;
+    background: rgba(7,17,31,.58);
+    color: #f8fbff;
+    padding: 13px 14px;
+    outline: none;
+    font: inherit;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+
+  .yd-contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+
+  .yd-contact-form input:focus,
+  .yd-contact-form select:focus,
+  .yd-contact-form textarea:focus {
+    border-color: rgba(217,164,65,.46);
+    box-shadow: 0 0 0 3px rgba(217,164,65,.12);
+    background: rgba(7,17,31,.78);
+  }
+
+  .yd-submit-btn {
+    justify-self: start;
+    min-height: 50px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: 1px solid #fff;
+    background: #fff;
+    color: #07111f;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .yd-submit-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .yd-submit-btn:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  @media (max-width: 980px) {
+    .yd-contact-wrap,
+    .yd-form-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .yd-contact-wrap {
+      width: min(100% - 32px, 1160px);
+      padding: 30px;
+    }
+  }
+</style>
+
+<script>
+  // 后续由 n8n / 服务器提供。不要直接填飞书机器人 Webhook 或 API Key。
+  const CONTACT_FORM_ENDPOINT = "REPLACE_WITH_N8N_WEBHOOK_URL";
+
+  document.getElementById("yuedaContactForm")?.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const note = document.getElementById("yuedaContactFormNote");
+    const button = form.querySelector("button[type='submit']");
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    if (!CONTACT_FORM_ENDPOINT || CONTACT_FORM_ENDPOINT.includes("REPLACE_WITH")) {
+      note.textContent = "合作需求通道正在配置中。请稍后通过公众号、视频号或私域渠道联系。";
+      return;
+    }
+
+    try {
+      button.disabled = true;
+      button.textContent = "提交中...";
+      note.textContent = "正在提交，请稍候。";
+
+      const res = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("submit failed");
+
+      form.reset();
+      note.textContent = "已收到你的需求。我们会根据你的业务场景判断适合做成 Skill、Agent、本地应用，还是 OA 协同模块。";
+      button.textContent = "已提交";
+    } catch (error) {
+      note.textContent = "提交失败，请稍后重试，或通过公众号、视频号、私域渠道联系。";
+      button.textContent = "重新提交";
+    } finally {
+      setTimeout(() => {
+        button.disabled = false;
+        if (button.textContent === "已提交") button.textContent = "提交合作需求";
+      }, 2200);
+    }
+  });
+</script>

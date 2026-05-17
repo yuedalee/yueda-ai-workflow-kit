@@ -6,6 +6,9 @@
 悦达智科网站：  
 [https://yuedalee.github.io/](https://yuedalee.github.io/)
 
+合作咨询：  
+[https://ydmedia.icu/contact#contact-form](https://ydmedia.icu/contact#contact-form)
+
 ---
 
 ## 一、这个仓库是什么？
@@ -270,6 +273,9 @@ Based on Yueda AI Workflow Kit by 悦达智科
 
 官网：  
 [https://yuedalee.github.io/](https://yuedalee.github.io/)
+
+合作咨询：  
+[https://ydmedia.icu/contact#contact-form](https://ydmedia.icu/contact#contact-form)
 
 ---
 

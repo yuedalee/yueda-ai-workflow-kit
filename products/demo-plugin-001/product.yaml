@@ -1,0 +1,29 @@
+id: demo-plugin-001
+name: 拼多多虚拟商品半自动发货助手
+platforms:
+  - 拼多多
+  - 淘宝
+  - 闲鱼
+price: 49
+target_user: 卖软件、插件、教程、资料包的一人公司或小商家
+main_pain: 手动整理发货内容慢，容易漏发、错发、重复发货，售后问题重复回答。
+core_value: 把商品资料、发货话术、安装教程、卡密和发货日志做成半自动本地流程。
+features:
+  - 订单文本复制后识别订单号、买家和规格
+  - 根据商品资料自动生成发货话术
+  - 自动消耗一条未使用卡密
+  - 自动记录发货日志，防止同一订单重复发货
+  - 保留人工复制确认，避免误发和平台风险
+delivery:
+  type: 网盘链接 + 安装教程 + 激活码
+  download_url: https://example.com/download/demo-plugin-001
+  install_guide_url: https://example.com/tutorial/demo-plugin-001
+  code_pool_file: data/demo_codes.csv
+after_sale:
+  - question: 下载链接打不开怎么办？
+    answer: 请先复制链接到浏览器打开；如果仍打不开，把订单号和截图发给客服。
+  - question: 激活码提示无效怎么办？
+    answer: 请确认没有多复制空格；仍无效时发送订单号和激活码截图。
+  - question: 不会安装怎么办？
+    answer: 请先看安装教程；仍不会操作时发送当前卡住步骤截图。
+assets: {}

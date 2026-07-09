@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Local generated outputs
+products/*/output/
+data/delivery_logs.csv
+
+# Secrets / real business data
+.env
+*.key
+*.pem
+cookies*.json
+secrets*.json
+real_orders*.csv
+real_codes*.csv
